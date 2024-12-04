@@ -1,10 +1,9 @@
 "use client"
 import React from 'react'
+import { dataList as data } from "@/src/data/list"
 import { Avatar, List } from 'antd';
-import { dataList as data } from "@/data/list"
 import Link from "next/link"
-export default function Page() {
-    console.log(data, 'dd');
+export default function list() {
     return (
         <div>
             <List
