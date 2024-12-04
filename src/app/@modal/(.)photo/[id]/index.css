@@ -1,0 +1,7 @@
+.photos{
+    position: absolute;
+    top: -28px;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(221, 215, 215);
+}
