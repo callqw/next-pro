@@ -1,8 +1,11 @@
-export async function GET() {
-    console.log('ininin');
+import { NextRequest } from "next/server";
 
-    // const data = await fetch('https://api.vercel.app/blog')
-    // const posts = await data.json()
+export async function GET(req: NextRequest) {
+    const serchParams = req.nextUrl.searchParams.get("query");
 
-    return Response.json({ msg: "success" })
+  console.log("ininin123",serchParams);
+  // const data = await fetch('https://api.vercel.app/blog')
+  // const posts = await data.json()
+
+  return Response.json({ msg: "success" });
 }
