@@ -1,3 +1,4 @@
+import { config } from "@/src/config";
 export const dataList = [
   { id: 1, name: "xiaohua", title: "balasdnfljfljlfk" },
   { id: 2, name: "xiaohu", title: "xiaohuxiaohuxiaohu" },
@@ -10,6 +11,11 @@ export const mainData = async function () {
       wx: "wx"
     }
   });
+  return await mainData.json();
+
+}
+export const getArtical = async function () {
+  const mainData = await fetch(`${config.url}:3000/api/artical`, { method: "POST" });
   return await mainData.json();
 
 }
