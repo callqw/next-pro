@@ -40,8 +40,6 @@ export default function RootLayout({
               <Link href="/">home</Link>
               <Link href="/visitor">visitor</Link>
             </div>
-            {/* <div> {team}{analytics}</div> */}
-            <div>{modal}</div>
             <div>{children}</div>
           </div>
         </AntdRegistry>
