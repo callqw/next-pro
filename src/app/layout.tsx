@@ -21,12 +21,9 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({
-  children, team, analytics, modal
+  children
 }: Readonly<{
   children: React.ReactNode;
-  team: React.ReactNode;
-  analytics: React.ReactNode;
-  modal: React.ReactNode;
 }>) {
   return (
     <html lang="zh-CN">
@@ -36,10 +33,6 @@ export default function RootLayout({
 
         <AntdRegistry>
           <div>
-            <div>
-              <Link href="/">home</Link>
-              <Link href="/visitor">visitor</Link>
-            </div>
             <div>{children}</div>
           </div>
         </AntdRegistry>
