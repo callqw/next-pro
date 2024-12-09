@@ -20,8 +20,10 @@ export async function generateMetadata(
   console.log(res, 'rrr');
 
   const product = await fetch(`https://xfragdoll.com/news`, {
+    method: "post",
     headers: {
-      wx: "wx"
+      wx: "wx",
+      Accept: "application/json, text/plain, */*"
     }
   })
 
