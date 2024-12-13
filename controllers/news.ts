@@ -11,7 +11,7 @@ const Link = require('@/modules/link');
 // const err = require('./404');
 
 export const newsHtml = function (ctx) {
-    return new Promise(async (resolve, reject) => {
+    return new Promise<BASIC.NewsData>(async (resolve, reject) => {
 
 
         var dateVal = moment(Date.now()).format('YYYY-MM-DD HH:mm:ss');
@@ -38,10 +38,11 @@ export const newsHtml = function (ctx) {
                 link: await Link.linkSelect(ctx)
             }
 
-            resolve(data)
+            resolve(CircularJSON.parse(CircularJSON.stringify(data)))
 
         } else {
-            resolve({ err: 1, msg: "没查询到数据" })
+            let data = { err: 1, msg: "没查询到数据" };
+            resolve(CircularJSON.parse(CircularJSON.stringify(data)))
         }
     })
 
