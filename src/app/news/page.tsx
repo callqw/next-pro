@@ -8,7 +8,7 @@ export default async function Page() {
             page: '0'
         }
     })
-    console.log(res, 'res');
+    // console.log(res, 'res');
 
     return (
         <div>

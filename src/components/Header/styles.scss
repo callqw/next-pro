@@ -1,0 +1,19 @@
+.headerSvgSetts {
+    position: relative;
+    top: 4px;
+}
+
+.header-logo {
+    display: flex;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.65);
+    width: 220px;
+
+    a {
+        color: rgba(255, 255, 255, 0.65);
+    }
+
+    a:hover {
+        color: rgb(255, 255, 255);
+    }
+}

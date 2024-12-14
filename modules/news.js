@@ -61,8 +61,6 @@ var selectNewsTemplate = function (obj) {
 }
 //查询所有新闻动态
 var SelectAllNews = function (obj) {
-    console.log(obj, 'oo');
-
     return new Promise((resolve, reject) => {
         var from = (Number(obj.page) - 1) * 8, to = 50;
         db.query('SELECT * FROM `news` ORDER BY id DESC LIMIT ' + from + ',' + to + '', async function (err, result) {

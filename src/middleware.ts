@@ -2,7 +2,7 @@ import { NextResponse, NextRequest } from 'next/server'
 
 // This function can be marked `async` if using `await` inside
 export function middleware(req: NextRequest) {
-    console.log(req.nextUrl.pathname, 'in about111');
+    // console.log(req.nextUrl.pathname, 'in about111');
 
     // return NextResponse.redirect(new URL('/home', request.url))
 }

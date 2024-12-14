@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import localFont from "next/font/local";
 import "./globals.css";
 import { AntdRegistry } from '@ant-design/nextjs-registry';
-
+import Header from "@/src/components/Header";
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
@@ -30,16 +29,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="zh-CN">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >2
-
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <AntdRegistry>
           <div>
-            <div>
-              <Link href="/">home</Link>
-              <Link href="/visitor">visitor</Link>
-            </div>
+            <Header></Header>
             <div>{children}</div>
           </div>
         </AntdRegistry>
