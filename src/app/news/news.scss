@@ -1,0 +1,18 @@
+.newsImageCol {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+}
+
+.newsImageSetter {
+    // width: 200px;
+    // height: 200px;
+
+    .newsImageSetterItems {
+        width: 158px !important;
+        height: 158px !important;
+        object-fit: cover;
+        border-radius: 8px
+    }
+
+}
