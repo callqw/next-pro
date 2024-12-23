@@ -40,7 +40,7 @@ const Client: React.FC<ClientProps> = function ({ news }) {
                             ]}
                         >
                             <div className='newsImageSetter'>
-                                <Image className='newsImageSetterItems'
+                                <Image alt='img' className='newsImageSetterItems'
                                     src="https://gw.alipayobjects.com/zos/antfincdn/LlvErxo8H9/photo-1503185912284-5271ff81b9a8.webp"
                                 />
                             </div>
@@ -58,7 +58,7 @@ const Client: React.FC<ClientProps> = function ({ news }) {
                             ]}
                         >
                             <div className='newsImageSetter'>
-                                <Image className='newsImageSetterItems'
+                                <Image alt='img' className='newsImageSetterItems'
                                     src="https://gw.alipayobjects.com/zos/antfincdn/LlvErxo8H9/photo-1503185912284-5271ff81b9a8.webp"
                                 />
                             </div>
@@ -76,7 +76,7 @@ const Client: React.FC<ClientProps> = function ({ news }) {
                             ]}
                         >
                             <div className='newsImageSetter'>
-                                <Image className='newsImageSetterItems'
+                                <Image alt='img' className='newsImageSetterItems'
                                     src="https://gw.alipayobjects.com/zos/antfincdn/LlvErxo8H9/photo-1503185912284-5271ff81b9a8.webp"
                                 />
                             </div>
@@ -93,7 +93,7 @@ const Client: React.FC<ClientProps> = function ({ news }) {
                             ]}
                         >
                             <div className='newsImageSetter'>
-                                <Image className='newsImageSetterItems'
+                                <Image alt='img' className='newsImageSetterItems'
                                     src="https://gw.alipayobjects.com/zos/antfincdn/LlvErxo8H9/photo-1503185912284-5271ff81b9a8.webp"
                                 />
                             </div>

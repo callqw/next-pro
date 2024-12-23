@@ -9,6 +9,7 @@ export default async function Home() {
   return (
     <div>
       <Content contentData={contentData}></Content>
+
     </div>
   );
 }

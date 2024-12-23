@@ -8,10 +8,10 @@ const Link = require('@/modules/link');
 const News = require('@/modules/news')
 const CatTemplate = require('@/modules/catTemplate');
 const video = require('@/modules/video');
-const ossPrivie = require('@/controllers/ali-oss/privite');
+import ossPrivie from '@/controllers/ali-oss/privite'
 const circular = require('circular-json');
 const CircularJSON = require('circular-json');
-var indexHtml = async function (ctx, next) {
+export const indexHtml = async function () {
     let title = [{
         name: '种公展示', url: 'https://yxcx.oss-cn-beijing.aliyuncs.com/yxcximg/banner/xfRagdoll/1592404359854'
     }, {
@@ -65,6 +65,8 @@ var indexHtml = async function (ctx, next) {
             { address: 'qilinfangjian', name: '麒麟房间紫外线杀菌', url: 'https://yxcx.oss-cn-beijing.aliyuncs.com/yxcximg/banner/xfRagdoll/1592482112134' },
             { address: 'beila', name: '客厅贝拉', url: 'https://yxcx.oss-cn-beijing.aliyuncs.com/yxcximg/banner/xfRagdoll/1593593775149' },
         ];
+        let script = require('./publicStore');
+        script = script.script();
         title = ossPrivie.privie(title);
         zhonggong = ossPrivie.privie(zhonggong);
         zhongmu = ossPrivie.privie(zhongmu);
@@ -81,7 +83,7 @@ var indexHtml = async function (ctx, next) {
             date: {
                 val: dateVal
             },
-            link: await Link.linkSelect(ctx),
+            link: await Link.linkSelect(),
             news: await News.SelectAllNews({ page: 1 }),
             awaitSale: await CatTemplate.SelectAllCatTemplate({ page: 1 }),
             video: await video.SelectAllNews({ page: 1 }),
@@ -90,11 +92,9 @@ var indexHtml = async function (ctx, next) {
             zhongmu: CircularJSON.parse(CircularJSON.stringify(zhongmu)),
             youmao: CircularJSON.parse(CircularJSON.stringify(youmao)),
             maoshezhanshi: CircularJSON.parse(CircularJSON.stringify(maoshezhanshi)),
+            script: script
         }
         resolve(CircularJSON.parse(CircularJSON.stringify(data)))
     })
 
-}
-module.exports = {
-    indexHtml: indexHtml
 }

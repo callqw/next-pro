@@ -2,9 +2,9 @@
 "use client"
 import React from 'react'
 import { Card, Row, Col, Divider } from 'antd';
-
+import Image from 'next/image'
 const { Meta } = Card;
-export default function Content({ contentData }) {
+export default function Content({ contentData }: any) {
     console.log(contentData.zhonggong, 'cc');
     return (
         <div style={{ padding: "0 32px 0 32px" }}>
@@ -12,13 +12,13 @@ export default function Content({ contentData }) {
                 <Col md={7} xs={3}>
                 </Col>
                 <Col md={10} xs={18}>
-                    <img style={{ width: "100%" }} src={contentData.title[0].url} alt={contentData.title[0].name} />
+                    <Image style={{ width: "100%" }} src={contentData.title[0].url} alt={contentData.title[0].name} />
                 </Col>
                 <Col md={7} xs={3}>
                 </Col>
             </Row>
             <Row gutter={[16, 16]}>
-                {contentData.zhonggong.map((item, index) => {
+                {contentData.zhonggong.map((item: any, index: any) => {
                     return (
                         <Col key={index} md={6} xs={12}>
                             <Card
@@ -26,7 +26,7 @@ export default function Content({ contentData }) {
                                 style={{ width: "100%", margin: "0 auto", }}
                                 cover={
                                     <div style={{ width: "100%", height: "220px" }}>
-                                        <img style={{ objectFit: "cover", objectPosition: "top", width: "100%", height: "100%" }} alt={item.name}
+                                        <Image style={{ objectFit: "cover", objectPosition: "top", width: "100%", height: "100%" }} alt={item.name}
                                             src={item.url} />
                                     </div>
 
@@ -43,13 +43,13 @@ export default function Content({ contentData }) {
                 <Col md={7} xs={3}>
                 </Col>
                 <Col md={10} xs={18}>
-                    <img style={{ width: "100%" }} src={contentData.title[1].url} alt={contentData.title[1].name} />
+                    <Image style={{ width: "100%" }} src={contentData.title[1].url} alt={contentData.title[1].name} />
                 </Col>
                 <Col md={7} xs={3}>
                 </Col>
             </Row>
             <Row gutter={[16, 16]}>
-                {contentData.zhongmu.map((item, index) => {
+                {contentData.zhongmu.map((item: any, index: any) => {
                     return (
                         <Col key={index} md={6} xs={12}>
                             <Card
@@ -57,7 +57,7 @@ export default function Content({ contentData }) {
                                 style={{ width: "100%", margin: "0 auto", }}
                                 cover={
                                     <div style={{ width: "100%", height: "220px" }}>
-                                        <img style={{ objectFit: "cover", objectPosition: "top", width: "100%", height: "100%" }} alt={item.name}
+                                        <Image style={{ objectFit: "cover", objectPosition: "top", width: "100%", height: "100%" }} alt={item.name}
                                             src={item.url} />
                                     </div>
 
