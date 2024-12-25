@@ -11,6 +11,17 @@ const Client: React.FC<ClientProps> = function ({ news }) {
         return (
             <div>
                 <Row>
+                <Col span={6}>
+                </Col> 
+                <Col span={12}>
+                <div style={{width:"130px",height:"130px"}}>
+                <Image style={{objectFit:"cover",height:"100%",position:"absolute",left:"0"}} src="https://gw.alipayobjects.com/zos/antfincdn/cV16ZqzMjW/photo-1473091540282-9b846e7965e3.webp" alt="tu" />
+                </div>
+                </Col>
+                <Col span={6}>
+                </Col>
+                </Row>
+                <Row>
                     <Col span={6}>
                     </Col>
                     <Col span={12}>
