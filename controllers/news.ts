@@ -10,7 +10,7 @@ const unicode = require('@/modules/unicode');
 const Link = require('@/modules/link');
 // const err = require('./404');
 
-export const newsHtml = function (ctx) {
+export const newsHtml = function (ctx: any) {
     return new Promise<BASIC.NewsData>(async (resolve, reject) => {
 
 

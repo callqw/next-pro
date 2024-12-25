@@ -1,4 +1,8 @@
 declare namespace BASIC {
+    interface AllData {
+        alldata: number,
+        Provider: any
+    }
     type ImgList = {
         url: string
     }

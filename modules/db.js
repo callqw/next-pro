@@ -9,4 +9,4 @@ const config = mysql.createConnection({
     port: 3306
 });
 config.connect();
-module.exports = {config:config};
+module.exports = { config: config };

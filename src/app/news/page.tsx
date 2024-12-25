@@ -1,5 +1,5 @@
 import React from 'react'
-import { newsHtml } from "@/controllers/news.ts";
+import { newsHtml } from "@/controllers/news";
 import Client from "./client";
 export default async function Page() {
 
