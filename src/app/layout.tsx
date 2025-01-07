@@ -3,8 +3,8 @@ import localFont from "next/font/local";
 import "./globals.css";
 import { AntdRegistry } from '@ant-design/nextjs-registry';
 import Header from "@/src/components/Header";
-import Footer from "../components/Footer";
-import { indexHtml } from "@/controllers/index"
+import Footer from "@/src/components/Footer";
+// import { indexHtml } from "@/controllers/index"
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
@@ -22,14 +22,11 @@ export const metadata: Metadata = {
 };
 
 export default async function RootLayout({
-  children, team, analytics, modal
+  children
 }: Readonly<{
   children: React.ReactNode;
-  team: React.ReactNode;
-  analytics: React.ReactNode;
-  modal: React.ReactNode;
 }>) {
-  const contentData = await indexHtml();
+  // const contentData = await indexHtml();
   return (
     <html lang="zh-CN">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`} style={{ background: "#6e747a" }}>
@@ -37,7 +34,7 @@ export default async function RootLayout({
           <div>
             <Header></Header>
             <div>{children}</div>
-            <Footer allData={contentData} ></Footer>
+            {/* <Footer allData={contentData} ></Footer> */}
           </div>
         </AntdRegistry>
       </body>

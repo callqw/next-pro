@@ -8,6 +8,9 @@ const nextConfig: NextConfig = {
       {
         hostname: 'tailwindui.com',
       },
+      {
+        hostname: 'yxcx.oss-cn-beijing.aliyuncs.com',
+      },
     ],
   },
   sassOptions: {

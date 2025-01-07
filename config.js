@@ -29,7 +29,7 @@ const CONF = {
         port: 3306,
         user: 'root',
         db: 'xfragdoll',
-        pass: IS_DEV ? 'Callqw1234567' : '',
+        pass: '',
         char: 'utf8mb4'
     },
     cos: {

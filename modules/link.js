@@ -1,7 +1,7 @@
 /**
  * Created by xj on 2019/4/11.
  */
-const db = require('./db').config;
+const db = require('@/modules/db').config;
 // const encrypt = require('../controllers/middleware/encrypt')
 const moment = require('moment')
 var CircularJSON = require('circular-json');
@@ -41,24 +41,25 @@ var linkInsert = function (obj, ctx) {
     })
 }
 
-const linkSelect = function (ctx) {
-    var from = 0, to = 500;
+const linkSelect = function () {
+
     return new Promise(async (resolve, reject) => {
-        db.query('SELECT * FROM `link` ORDER BY id DESC', function (err, result) {
-            if (err) throw err;
-            if (result.length != 0) {
-                resolve({
-                    status: 200,
-                    data: result,
-                    msg: '友链查询成功'
-                });
-            } else {
-                resolve({
-                    status: 404,
-                    msg: '友链查询错误'
-                });
-            }
-        });
+        const connection = await db.getConnection();
+       const [rows,fields] =  await connection.query('SELECT * FROM `link` ORDER BY id DESC');
+       console.log('查询数据',rows);
+       
+        if (rows.length != 0) {
+            resolve({
+                status: 200,
+                data: rows,
+                msg: '友链查询成功'
+            });
+        } else {
+            resolve({
+                status: 404,
+                msg: '友链查询错误'
+            });
+        }
     })
 }
 const linkDel = function (ctx, obj) {

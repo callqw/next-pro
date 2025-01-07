@@ -34,11 +34,11 @@ export default function Footer({ allData }: any) {
                 </Col>
                 <Col className='footerCol' xs={24} md={6}>
                     <div className='fotterMargin'><h3 className='fotterMarginH1' style={{ textAlign: "center" }}>微信</h3></div>
-                    <div style={{ textAlign: "center" }}><Image alt={allData.script[13].name} style={{ width: "10rem", margin: "0 auto" }} src={allData.script[13].url} /></div>
+                    <div style={{ textAlign: "center" }}><Image  width={100} height={100} alt={allData.script[13].name} style={{ width: "auto", margin: "0 auto" }} src={allData.script[13].url} /></div>
                 </Col>
                 <Col className='footerCol' xs={24} md={6}>
                     <div className='fotterMargin'><h3 className='fotterMarginH1' style={{ textAlign: "center" }}>小程序</h3></div>
-                    <div style={{ textAlign: "center" }}><Image alt={allData.script[14].name} style={{ width: "10rem", margin: "0 auto" }} src={allData.script[14].url} /></div>
+                    <div style={{ textAlign: "center" }}><Image width={100} height={100} alt={allData.script[14].name} style={{ width: "auto", margin: "0 auto" }} src={allData.script[14].url} /></div>
                 </Col>
             </Row>
         </div>
